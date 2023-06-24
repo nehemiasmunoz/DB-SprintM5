@@ -1,6 +1,7 @@
 CREATE database sprint_m5;
 use sprint_m5;
 
+<<<<<<< HEAD
 CREATE TABLE Tipo_Usuario(
 	id_tipo_usuario int NOT NULL AUTO_INCREMENT,
 	nombre varchar(15),
@@ -20,3 +21,5 @@ CREATE TABLE Usuario(
 	PRIMARY KEY (id_usuario),
 	FOREIGN KEY (tipo_usuario) REFERENCES  Tipo_Usuario(id_tipo_usuario)
 )
+=======
+>>>>>>> master
