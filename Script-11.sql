@@ -1,6 +1,7 @@
 CREATE database sprint_m5;
 use sprint_m5;
 
+<<<<<<< HEAD
 CREATE TABLE Tipo_Usuario(
 	id_tipo_usuario int NOT NULL AUTO_INCREMENT,
 	nombre varchar(15),
