@@ -18,6 +18,8 @@
 --
 -- Table structure for table `Administrativo`
 --
+create database sprintm5;
+use sprintm5;
 
 DROP TABLE IF EXISTS `Administrativo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -114,7 +116,7 @@ CREATE TABLE `Profesional` (
   `id_profesional` int NOT NULL AUTO_INCREMENT,
   `id_usuario` int DEFAULT NULL,
   `titulo` varchar(100) DEFAULT NULL,
-  `fechar_ingreso` date DEFAULT NULL,
+  `fecha_ingreso` date DEFAULT NULL,
   PRIMARY KEY (`id_profesional`),
   KEY `id_usuario` (`id_usuario`),
   CONSTRAINT `profesional_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `Usuario` (`id_usuario`)
@@ -165,7 +167,7 @@ CREATE TABLE `Usuario` (
   `nombre` varchar(100) DEFAULT NULL,
   `apellido1` varchar(100) DEFAULT NULL,
   `apellido2` varchar(100) DEFAULT NULL,
-  `fechar_nacimiento` date DEFAULT NULL,
+  `fecha_nacimiento` date DEFAULT NULL,
   `run` int DEFAULT NULL,
   `contrasenia` varchar(10) DEFAULT NULL,
   `tipo_usuario` int DEFAULT NULL,
