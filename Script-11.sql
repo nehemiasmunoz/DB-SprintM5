@@ -1,9 +1,9 @@
-CREATE database sprint_m5;
-use sprint_m5;
+-- CREATE database sql9628208;
+use sql9628208;
 -- @autor: manuel pinot
 -- MySQL dump 10.13  Distrib 8.0.33, for macos13 (arm64)
 --
--- Host: localhost    Database: sprint_m5
+-- Host: localhost    Database: sql9628208
 -- ------------------------------------------------------
 -- Server version	8.0.33
 
@@ -21,8 +21,6 @@ use sprint_m5;
 --
 -- Table structure for table `Administrativo`
 --
-create database sprintm5;
-use sprintm5;
 
 DROP TABLE IF EXISTS `Administrativo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -35,7 +33,7 @@ CREATE TABLE `Administrativo` (
   PRIMARY KEY (`id_administrativo`),
   KEY `id_usuario` (`id_usuario`),
   CONSTRAINT `administrativo_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `Usuario` (`id_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +63,7 @@ CREATE TABLE `Capacitacion` (
   PRIMARY KEY (`id_capacitacion`),
   KEY `rut_cliente` (`rut_cliente`),
   CONSTRAINT `capacitacion_ibfk_1` FOREIGN KEY (`rut_cliente`) REFERENCES `Cliente` (`id_cliente`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,7 +94,7 @@ CREATE TABLE `Cliente` (
   PRIMARY KEY (`id_cliente`),
   KEY `id_usuario` (`id_usuario`),
   CONSTRAINT `cliente_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `Usuario` (`id_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,7 +121,7 @@ CREATE TABLE `Profesional` (
   PRIMARY KEY (`id_profesional`),
   KEY `id_usuario` (`id_usuario`),
   CONSTRAINT `profesional_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `Usuario` (`id_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -146,7 +144,7 @@ CREATE TABLE `Tipo_Usuario` (
   `id_tipo_usuario` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id_tipo_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -177,7 +175,7 @@ CREATE TABLE `Usuario` (
   PRIMARY KEY (`id_usuario`),
   KEY `tipo_usuario` (`tipo_usuario`),
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`tipo_usuario`) REFERENCES `Tipo_Usuario` (`id_tipo_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
